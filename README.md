@@ -1,7 +1,7 @@
 
 # Smooth Adversarial Training
 
-Code and models for the paper [Smooth Adversarial Training](https://arxiv.org/pdf/2006.14536.pdf).
+Evaluation code and models for the paper [Smooth Adversarial Training](https://arxiv.org/pdf/2006.14536.pdf).
 
 ## Introduction
 
