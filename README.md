@@ -1,13 +1,25 @@
 
 # Smooth Adversarial Training
 
-Evaluation code and models for the paper [Smooth Adversarial Training](https://arxiv.org/pdf/2006.14536.pdf).
+Code and models for the paper [Smooth Adversarial Training](https://arxiv.org/pdf/2006.14536.pdf).
+
+## Things to do
+- [x] ResNet single-GPU inference
+- [x] ResNet Multi-GPU inference
+- [x] ResNet adversarial robustness evaluation
+- [ ] ResNet adversarial training
+- [x] EfficientNet single-GPU inference
+- [ ] EfficientNet Multi-GPU inference
+- [ ] EfficientNet adversarial robustness evaluation
+- [ ] EfficientNet adversarial training
 
 ## Introduction
 
 <div align="center">
   <img src="teaser.jpg" width="800px" />
 </div>
+
+
 
 ## Citation
 
