@@ -45,44 +45,43 @@ Scripts to download [ResNet](ResNet/download_resnet.py) or [EfficientNet](Effici
 <tr>
 <th align="left" rowspan=2>Model (click for details)</th>
 <th align="center">error rate (%)</th>
-<th align="center" colspan=3>error rate / attack success rate (%)</th>
+<th align="center" colspan=3>error rate(%)</th>
 </tr>
 <tr>
 <th align="center">clean images</th>
 <th align="center">10-step PGD</th>
-<th align="center">100-step PGD</th>
-<th align="center">1000-step PGD</th>
+<th align="center">20-step PGD</th>
+<th align="center">50-step PGD</th>
 </tr>
 </thead>
 
 
 <tbody>
 <tr>
-<td align="left"><details><summary>ResNet152 Baseline </summary> <code>--arch ResNet -d 152</code>
-<a href="https://github.com/facebookresearch/ImageNet-Adversarial-Training/releases/download/v0/R152.npz"> :arrow_down: </a>   </details></td>
-<td align="center">37.7</td>
-<td align="center">47.5/5.5</td>
-<td align="center">58.3/31.0</td>
-<td align="center">61.0/36.1</td>
+<td align="left"><details><summary>ReLU </summary> <code>--arch ResNet -d 152</code></details></td>
+<td align="center">68.7</td>
+<td align="center"></td>
+<td align="center">35.3</td>
+<td align="center">33.7</td>
+<td align="center">33.1</td>
 </tr>
 
 <tr>
-<td align="left"><details><summary>ResNet152 Denoise  </summary> <code>--arch ResNetDenoise -d 152</code>
-<a href="https://github.com/facebookresearch/ImageNet-Adversarial-Training/releases/download/v0.1/R152-Denoise.npz"> :arrow_down: </a> </details></td>
-<td align="center">34.7</td>
-<td align="center">44.3/4.9</td>
-<td align="center">54.5/26.6</td>
-<td align="center">57.2/32.7</td>
+<td align="left"><details><summary>ReLU </summary> <code>--arch ResNet -d 152</code></details></td>
+<td align="center">68.7</td>
+<td align="center"></td>
+<td align="center">35.3</td>
+<td align="center">33.7</td>
+<td align="center">33.1</td>
 </tr>
 
 <tr>
-<td align="left"><details><summary>ResNeXt101 DenoiseAll   </summary><code>--arch ResNeXtDenoiseAll</code> <br> <code>-d 101</code>
-<a href="https://github.com/facebookresearch/ImageNet-Adversarial-Training/releases/download/v0.2/X101-DenoiseAll.npz"> :arrow_down: </a>
-</details></td>
-<td align="center">31.6</td>
-<td align="center">44.0/4.9</td>
-<td align="center">55.6/31.5</td>
-<td align="center">59.6/38.1</td>
+<td align="left"><details><summary>ReLU </summary> <code>--arch ResNet -d 152</code></details></td>
+<td align="center">68.7</td>
+<td align="center"></td>
+<td align="center">35.3</td>
+<td align="center">33.7</td>
+<td align="center">33.1</td>
 </tr>
 </tbody>
 </table>
