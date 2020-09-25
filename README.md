@@ -40,6 +40,12 @@ We also explore the limits of SAT with larger networks. We obtain the best resul
 
 Scripts to download [ResNet](ResNet/download_resnet.py) or [EfficientNet](EfficientNet/download_efficientnet.py) from Google Drive.
 
+To run ResNet-50 with different activation functions.
+
+```bash
+python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load $YOUR_MODEL_DIR --data=$PATH_TO_IMAGENET --eval-attack-iter=$YOUR_ATTACK_ITERATION_FOR_EVAL --batch=$YOUR_EVALUATION_BATCH_SIZE --eval --attack-epsilon=4.0 -d=50 --attack-step-size=1.0 
+```
+
 <table>
 <thead>
 <tr>
