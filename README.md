@@ -234,7 +234,7 @@ python main.py --model_name=$EFFICIENTNET_NAME --moving_average_decay=$EMA_VALUE
 </tr>
 
 <tr>
-<td align="left"><details><summary>EfficientNet-B1</summary> <code>--model_name=efficientnet-b0 --moving_average_decay=0</code></details></td>
+<td align="left"><details><summary>EfficientNet-B1</summary> <code>--model_name=efficientnet-b1 --moving_average_decay=0</code></details></td>
 <td align="center">68.6</td>
 <td align="center">TODO</td>
 <td align="center">TODO</td>
