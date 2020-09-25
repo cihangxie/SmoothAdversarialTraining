@@ -42,7 +42,7 @@ Note:
 
 1. Here are the scripts for downloading [ResNet](ResNet/download_resnet.py) or [EfficientNet](EfficientNet/download_efficientnet.py) from Google Drive.
 2. For robustness evaluation, the maximum perturbation per pixel is 4, and the attacker is non-targeted.
-3. ResNet performance reported here is slightly different from the performance reported in the paper, since the image loader here is slightly different from the [image loader used in the original framework](https://github.com/tensorflow/tpu/blob/master/models/official/resnet/imagenet_input.py).
+3. ResNet performance reported here is slightly different from the performance reported in the paper, since the image loader here is slightly different from the [image loader used in the original training/evaluation code](https://github.com/tensorflow/tpu/blob/master/models/official/resnet/imagenet_input.py).
 
 - __To run ResNet-50 with different activation functions__
 
