@@ -4,6 +4,7 @@
 Code and models for the paper [Smooth Adversarial Training](https://arxiv.org/pdf/2006.14536.pdf).
 
 ## Things to do
+- [x] Releasing pre-trained ResNet and EfficientNet
 - [x] ResNet single-GPU inference
 - [x] ResNet multi-GPU inference
 - [x] ResNet adversarial robustness evaluation
@@ -21,7 +22,7 @@ Code and models for the paper [Smooth Adversarial Training](https://arxiv.org/pd
 
 The widely-used ReLU activation function significantly weakens adversarial training due to its non-smooth nature. In this project, we developed smooth adversarial training (SAT), in which we replace ReLU with its smooth approximations (e.g., SILU, softplus, SmoothReLU) to strengthen adversarial training. 
 
-On ResNet-50, the best result reported by SAT on ImageNet is 69.7% accuracy and 42.3% robustness, beating its ReLU version by 0.9 for accuracy and 9.3 for robustnes.
+On ResNet-50, the best result reported by SAT on ImageNet is 69.7% accuracy and 42.3% robustness, beating its ReLU version by 0.9% for accuracy and 9.3% for robustnes.
 
 We also explore the limits of SAT with larger networks. We obtain the best result by using EfficientNet-L1, which achieves 82.2% accuracy and 58.6% robustness on ImageNet.
 
@@ -40,7 +41,7 @@ We also explore the limits of SAT with larger networks. We obtain the best resul
 
 Note:
 
-1. Here are the scripts for downloading [ResNet](ResNet/download_resnet.py) or [EfficientNet](EfficientNet/download_efficientnet.py) from Google Drive.
+1. Here are the scripts for downloading [ResNet](ResNet/download_resnet.py) and [EfficientNet](EfficientNet/download_efficientnet.py) from Google Drive.
 2. For robustness evaluation, the maximum perturbation per pixel is 4, and the attacker is non-targeted.
 3. ResNet performance reported here is slightly different from the performance reported in the paper, since the image loader here is slightly different from the [image loader used in the original training/evaluation code](https://github.com/tensorflow/tpu/blob/master/models/official/resnet/imagenet_input.py).
 
