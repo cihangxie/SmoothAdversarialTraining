@@ -40,7 +40,7 @@ We also explore the limits of SAT with larger networks. We obtain the best resul
 
 Scripts to download [ResNet](ResNet/download_resnet.py) or [EfficientNet](EfficientNet/download_efficientnet.py) from Google Drive.
 
-To run ResNet-50 with different activation functions.
+__To run ResNet-50 with different activation functions__
 
 ```bash
 python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load $YOUR_MODEL_DIR --data=$PATH_TO_IMAGENET --eval-attack-iter=$YOUR_ATTACK_ITERATION_FOR_EVAL --batch=$YOUR_EVALUATION_BATCH_SIZE --eval --attack-epsilon=4.0 -d=50 --attack-step-size=1.0 
@@ -104,22 +104,101 @@ python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load $YOUR_MODEL_DI
 </tr>
 
 <tr>
-<td align="left"><details><summary>Softplus</summary> <code>--activation-name=softplus</code></details></td>
-<td align="center">68.1</td>
-<td align="center">41.1</td>
-<td align="center">40.4</td>
-<td align="center">40.2</td>
+<td align="left"><details><summary>Res</summary> <code>--activation-name=silu</code></details></td>
+<td align="center">69.7</td>
+<td align="center">43.0</td>
+<td align="center">42.2</td>
+<td align="center">41.9</td>
 </tr>
 </tbody>
 </table>
 
 
-To run ResNet-50 with SAT at different scale.
+__To run ResNet-50 with SAT at different scales__
 
 ```bash
-python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load $YOUR_MODEL_DIR --data=$PATH_TO_IMAGENET --eval-attack-iter=$YOUR_ATTACK_ITERATION_FOR_EVAL --batch=$YOUR_EVALUATION_BATCH_SIZE --eval --attack-epsilon=4.0 -d=50 --attack-step-size=1.0 
+python main.py  -d=$NETWORK_DEPTH --res2-bottleneck=$RESNEXT_BOTTLENECK --group=$RESNEXT_GROUP --input-size=$INPUT_SIZE --load $YOUR_MODEL_DIR --data=$PATH_TO_IMAGENET --eval-attack-iter=$YOUR_ATTACK_ITERATION_FOR_EVAL --batch=$YOUR_EVALUATION_BATCH_SIZE --eval --attack-epsilon=4.0 -d=50 --attack-step-size=1.0 --activation-name=silu
 ```
+<table>
+<thead>
+<tr>
+<th align="left" rowspan=2>SAT ResNet (click for details)</th>
+<th align="center">error rate (%)</th>
+<th align="center" colspan=3>error rate(%)</th>
+</tr>
+<tr>
+<th align="center">clean images</th>
+<th align="center">10-step PGD</th>
+<th align="center">20-step PGD</th>
+<th align="center">50-step PGD</th>
+</tr>
+</thead>
+  
+<tr>
+<td align="left"><details><summary>ResNet-50</summary> <code>--d=50 --res2-bottleneck=64 --group=1 --input-size=224</code></details></td>
+<td align="center">69.7</td>
+<td align="center">43.0</td>
+<td align="center">42.2</td>
+<td align="center">41.9</td>
+</tr>
 
+<tr>
+<td align="left"><details><summary>(2X deeper) ResNet-101 </summary> <code>--d=101 --res2-bottleneck=64 --group=1 --input-size=224</code></details></td>
+<td align="center">72.9</td>
+<td align="center">46.4</td>
+<td align="center">45.5</td>
+<td align="center">45.2</td>
+</tr>
+
+<tr>
+<td align="left"><details><summary>(3X deeper) ResNet-152</summary> <code>--d=152 --res2-bottleneck=64 --group=1 --input-size=224</code></details></td>
+<td align="center">74.0</td>
+<td align="center">47.3</td>
+<td align="center">46.2</td>
+<td align="center">45.8</td>
+</tr>
+
+<tr>
+<td align="left"><details><summary>(2X wider) ResNeXt-32x4d</summary> <code>--d=50 --res2-bottleneck=4 --group=32 --input-size=224</code></details></td>
+<td align="center">71.1</td>
+<td align="center">43.3</td>
+<td align="center">42.5</td>
+<td align="center">42.2</td>
+</tr>
+
+<tr>
+<td align="left"><details><summary>(4X wider) ResNeXt-32x8d</summary> <code>--d=50 --res2-bottleneck=8 --group=32 --input-size=224</code></details></td>
+<td align="center">73.3</td>
+<td align="center">46.3</td>
+<td align="center">45.2</td>
+<td align="center">44.8</td>
+</tr>
+
+<tr>
+<td align="left"><details><summary>(299 resolution) ResNet-50</summary> <code>--d=50 --res2-bottleneck=64 --group=1 --input-size=299</code></details></td>
+<td align="center">70.7</td>
+<td align="center">44.6</td>
+<td align="center">43.8</td>
+<td align="center">43.6</td>
+</tr>
+
+<tr>
+<td align="left"><details><summary>(380 resolution) ResNet-50</summary> <code>--d=50 --res2-bottleneck=64 --group=1 --input-size=380</code></details></td>
+<td align="center">71.6</td>
+<td align="center">44.9</td>
+<td align="center">44.1</td>
+<td align="center">43.8</td>
+</tr>
+
+<tr>
+<td align="left"><details><summary>(3X deeper & 4X wider & 380 resolution) ResNeXt152-32x8d</summary> <code>--d=152 --res2-bottleneck=8 --group=32 --input-size=380</code></details></td>
+<td align="center">78.0</td>
+<td align="center">53.0</td>
+<td align="center">51.7</td>
+<td align="center">51.0</td>
+</tr>
+</tbody>
+</table>
 
 __FOR ROBUSTNESS EVALUATION__, the Maximum perturbation per pixel is 4, and the attacker is non-targeted.
 
