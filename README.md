@@ -49,7 +49,7 @@ python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load $YOUR_MODEL_DI
 <table>
 <thead>
 <tr>
-<th align="left" rowspan=2>ResNet-50</th>
+<th align="left" rowspan=2>ResNet-50  (click for details)</th>
 <th align="center">error rate (%)</th>
 <th align="center" colspan=3>error rate(%)</th>
 </tr>
@@ -64,7 +64,7 @@ python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load $YOUR_MODEL_DI
 
 <tbody>
 <tr>
-<td align="left"><summary>ReLU </summary></td>
+<td align="left"><details><summary>ReLU</summary> <code>--activation-name=relu</code></details></td>
 <td align="center">68.7</td>
 <td align="center">35.3</td>
 <td align="center">33.7</td>
@@ -72,7 +72,7 @@ python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load $YOUR_MODEL_DI
 </tr>
 
 <tr>
-<td align="left"><summary>SILU </summary></td>
+<td align="left"><details><summary>SILU</summary> <code>--activation-name=silu</code></details></td>
 <td align="center">69.7</td>
 <td align="center">43.0</td>
 <td align="center">42.2</td>
@@ -80,7 +80,7 @@ python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load $YOUR_MODEL_DI
 </tr>
 
 <tr>
-<td align="left"><summary>ELU </summary></td>
+<td align="left"><details><summary>ELU</summary> <code>--activation-name=elu</code></details></td>
 <td align="center">69.0</td>
 <td align="center">41.6</td>
 <td align="center">40.9</td>
@@ -88,7 +88,7 @@ python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load $YOUR_MODEL_DI
 </tr>
 
 <tr>
-<td align="left"><summary>GELU </summary></td>
+<td align="left"><details><summary>GELU</summary> <code>--activation-name=gelu</code></details></td>
 <td align="center">69.9</td>
 <td align="center">42.6</td>
 <td align="center">41.8</td>
@@ -96,7 +96,7 @@ python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load $YOUR_MODEL_DI
 </tr>
 
 <tr>
-<td align="left"><summary>SmoothReLU </summary></td>
+<td align="left"><details><summary>SmoothReLU</summary> <code>--activation-name=smoothrelu</code></details></td>
 <td align="center">69.3</td>
 <td align="center">41.3</td>
 <td align="center">40.4</td>
@@ -104,7 +104,7 @@ python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load $YOUR_MODEL_DI
 </tr>
 
 <tr>
-<td align="left"><summary>Softplus </summary></td>
+<td align="left"><details><summary>Softplus</summary> <code>--activation-name=softplus</code></details></td>
 <td align="center">68.1</td>
 <td align="center">41.1</td>
 <td align="center">40.4</td>
@@ -112,6 +112,16 @@ python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load $YOUR_MODEL_DI
 </tr>
 </tbody>
 </table>
+
+
+To run ResNet-50 with SAT at different scale.
+
+```bash
+python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load $YOUR_MODEL_DIR --data=$PATH_TO_IMAGENET --eval-attack-iter=$YOUR_ATTACK_ITERATION_FOR_EVAL --batch=$YOUR_EVALUATION_BATCH_SIZE --eval --attack-epsilon=4.0 -d=50 --attack-step-size=1.0 
+```
+
+
+__FOR ROBUSTNESS EVALUATION__, the Maximum perturbation per pixel is 4, and the attacker is non-targeted.
 
 
 ## Acknowledgements
