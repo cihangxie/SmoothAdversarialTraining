@@ -38,9 +38,13 @@ We also explore the limits of SAT with larger networks. We obtain the best resul
 
 ## Model Zoo:
 
-Scripts to download [ResNet](ResNet/download_resnet.py) or [EfficientNet](EfficientNet/download_efficientnet.py) from Google Drive.
+Note:
 
-__To run ResNet-50 with different activation functions__
+1. Scripts to download [ResNet](ResNet/download_resnet.py) or [EfficientNet](EfficientNet/download_efficientnet.py) from Google Drive.
+2. FOR ROBUSTNESS EVALUATION, the Maximum perturbation per pixel is 4, and the attacker is non-targeted.
+3. ResNet performance reported here is slightly different from the performance reported in the paper, since the image loader here is slightly different from the [image loader used in the original framework](https://github.com/tensorflow/tpu/blob/master/models/official/resnet/imagenet_input.py).
+
+- __To run ResNet-50 with different activation functions__
 
 ```bash
 python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load $YOUR_MODEL_DIR --data=$PATH_TO_IMAGENET --eval-attack-iter=$YOUR_ATTACK_ITERATION_FOR_EVAL --batch=$YOUR_EVALUATION_BATCH_SIZE --eval --attack-epsilon=4.0 -d=50 --attack-step-size=1.0 
@@ -114,7 +118,7 @@ python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load $YOUR_MODEL_DI
 </table>
 
 
-__To run ResNet-50 with SAT at different scales__
+- __To run ResNet-50 with SAT at different scales__
 
 ```bash
 python main.py  -d=$NETWORK_DEPTH --res2-bottleneck=$RESNEXT_BOTTLENECK --group=$RESNEXT_GROUP --input-size=$INPUT_SIZE --load $YOUR_MODEL_DIR --data=$PATH_TO_IMAGENET --eval-attack-iter=$YOUR_ATTACK_ITERATION_FOR_EVAL --batch=$YOUR_EVALUATION_BATCH_SIZE --eval --attack-epsilon=4.0 -d=50 --attack-step-size=1.0 --activation-name=silu
@@ -200,7 +204,6 @@ python main.py  -d=$NETWORK_DEPTH --res2-bottleneck=$RESNEXT_BOTTLENECK --group=
 </tbody>
 </table>
 
-__FOR ROBUSTNESS EVALUATION__, the Maximum perturbation per pixel is 4, and the attacker is non-targeted.
 
 
 ## Acknowledgements
