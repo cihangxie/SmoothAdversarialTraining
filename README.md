@@ -6,7 +6,7 @@ Code and models for the paper [Smooth Adversarial Training](https://arxiv.org/pd
 ## Introduction
 
 <div align="center">
-  <img src="teaser.jpg" width="1000px" />
+  <img src="teaser.jpg" width="900px" />
 </div>
 
 ## Citation
