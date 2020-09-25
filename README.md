@@ -36,6 +36,58 @@ We also explore the limits of SAT with larger networks. We obtain the best resul
 + [gdown] (https://pypi.org/project/gdown/) for downloading pretrained ckpts
 
 
+## Model Zoo:
+
+Scripts to download [ResNet](ResNet/download_resnet.py) or [EfficientNet](EfficientNet/download_efficientnet.py) from Google Drive.
+
+<table>
+<thead>
+<tr>
+<th align="left" rowspan=2>Model (click for details)</th>
+<th align="center">error rate (%)</th>
+<th align="center" colspan=3>error rate / attack success rate (%)</th>
+</tr>
+<tr>
+<th align="center">clean images</th>
+<th align="center">10-step PGD</th>
+<th align="center">100-step PGD</th>
+<th align="center">1000-step PGD</th>
+</tr>
+</thead>
+
+
+<tbody>
+<tr>
+<td align="left"><details><summary>ResNet152 Baseline </summary> <code>--arch ResNet -d 152</code>
+<a href="https://github.com/facebookresearch/ImageNet-Adversarial-Training/releases/download/v0/R152.npz"> :arrow_down: </a>   </details></td>
+<td align="center">37.7</td>
+<td align="center">47.5/5.5</td>
+<td align="center">58.3/31.0</td>
+<td align="center">61.0/36.1</td>
+</tr>
+
+<tr>
+<td align="left"><details><summary>ResNet152 Denoise  </summary> <code>--arch ResNetDenoise -d 152</code>
+<a href="https://github.com/facebookresearch/ImageNet-Adversarial-Training/releases/download/v0.1/R152-Denoise.npz"> :arrow_down: </a> </details></td>
+<td align="center">34.7</td>
+<td align="center">44.3/4.9</td>
+<td align="center">54.5/26.6</td>
+<td align="center">57.2/32.7</td>
+</tr>
+
+<tr>
+<td align="left"><details><summary>ResNeXt101 DenoiseAll   </summary><code>--arch ResNeXtDenoiseAll</code> <br> <code>-d 101</code>
+<a href="https://github.com/facebookresearch/ImageNet-Adversarial-Training/releases/download/v0.2/X101-DenoiseAll.npz"> :arrow_down: </a>
+</details></td>
+<td align="center">31.6</td>
+<td align="center">44.0/4.9</td>
+<td align="center">55.6/31.5</td>
+<td align="center">59.6/38.1</td>
+</tr>
+</tbody>
+</table>
+
+
 ## Acknowledgements
 
 The <b>MAJOR</b> part of this code come from [ImageNet-Adversarial-Training](https://github.com/facebookresearch/ImageNet-Adversarial-Training) and [EfficientNet](https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet). We thanks [Yingwei Li](https://yingwei.li/) and [Jieru Mei](https://scholar.google.com/citations?user=nHKExN0AAAAJ&hl) for helping open resource the code and models.
