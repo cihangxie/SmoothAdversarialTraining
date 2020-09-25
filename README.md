@@ -19,10 +19,11 @@ Code and models for the paper [Smooth Adversarial Training](https://arxiv.org/pd
   <img src="teaser.jpg" width="800px" />
 </div>
 
-The widely-used ReLU activation function significantly weakens adversarial training due to its non-smooth nature. In this project, we developed smooth adversarial training (SAT), in which we replace ReLU with its smooth approximations (e.g., SILU, softplus, SmoothReLU) to strengthen adversarial training. The purpose of smooth activation functions in SAT is to allow it to find harder adversarial examples and compute better gradient updates during adversarial training.
+The widely-used ReLU activation function significantly weakens adversarial training due to its non-smooth nature. In this project, we developed smooth adversarial training (SAT), in which we replace ReLU with its smooth approximations (e.g., SILU, softplus, SmoothReLU) to strengthen adversarial training. 
 
+On ResNet-50, the best results reported by SAT is 69.7% accuracy and 42.3% robustness, beating its ReLU version by 0.9 for accuracy and 9.3 for robustnes.
 
-We also explore the limits of SAT with larger networks. We obtain the best result by using EfficientNetL1, which achieves 82.2% accuracy and 58.6% robustness on ImageNet.
+We also explore the limits of SAT with larger networks. We obtain the best result by using EfficientNet-L1, which achieves 82.2% accuracy and 58.6% robustness on ImageNet.
 
 
 ## Dependencies:
