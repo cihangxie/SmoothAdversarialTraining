@@ -290,7 +290,7 @@ python main.py --model_name=$EFFICIENTNET_NAME --moving_average_decay=$EMA_VALUE
 </tr>
 
 <tr>
-<td align="left"><details><summary>EfficientNet-B8</summary> <code>--model_name=efficientnet-bL1 --moving_average_decay=0</code></details></td>
+<td align="left"><details><summary>EfficientNet-L1</summary> <code>--model_name=efficientnet-bL1 --moving_average_decay=0</code></details></td>
 <td align="center">80.7</td>
 <td align="center">TODO</td>
 <td align="center">TODO</td>
@@ -298,7 +298,7 @@ python main.py --model_name=$EFFICIENTNET_NAME --moving_average_decay=$EMA_VALUE
 </tr>
 
 <tr>
-<td align="left"><details><summary>EfficientNet-B0</summary> <code>--model_name=efficientnet-bL1 --moving_average_decay=0.9999</code></details></td>
+<td align="left"><details><summary>EfficientNet-L1-Enhanced</summary> <code>--model_name=efficientnet-bL1 --moving_average_decay=0.9999</code></details></td>
 <td align="center">82.2</td>
 <td align="center">TODO</td>
 <td align="center">TODO</td>
