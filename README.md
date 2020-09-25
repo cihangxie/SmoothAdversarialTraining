@@ -48,7 +48,7 @@ Note:
 - __To run ResNet-50 with different activation functions__
 
 ```bash
-python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load=$YOUR_MODEL_DIR --data=$PATH_TO_IMAGENET --eval-attack-iter=$YOUR_ATTACK_ITERATION_FOR_EVAL --batch=$YOUR_EVALUATION_BATCH_SIZE --eval --attack-epsilon=4.0 -d=50 --attack-step-size=1.0 
+python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load=$YOUR_CKPT_PATH --data=$PATH_TO_IMAGENET --eval-attack-iter=$YOUR_ATTACK_ITERATION_FOR_EVAL --batch=$YOUR_EVALUATION_BATCH_SIZE --eval --attack-epsilon=4.0 -d=50 --attack-step-size=1.0 
 ```
 
 <table>
@@ -122,7 +122,7 @@ python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load=$YOUR_MODEL_DI
 - __To run ResNet with SAT at different scales__
 
 ```bash
-python main.py  -d=$NETWORK_DEPTH --res2-bottleneck=$RESNEXT_BOTTLENECK --group=$RESNEXT_GROUP --input-size=$INPUT_SIZE --load=$YOUR_MODEL_DIR --data=$PATH_TO_IMAGENET --eval-attack-iter=$YOUR_ATTACK_ITERATION_FOR_EVAL --batch=$YOUR_EVALUATION_BATCH_SIZE --eval --attack-epsilon=4.0 -d=50 --attack-step-size=1.0 --activation-name=silu
+python main.py  -d=$NETWORK_DEPTH --res2-bottleneck=$RESNEXT_BOTTLENECK --group=$RESNEXT_GROUP --input-size=$INPUT_SIZE --load=$YOUR_CKPT_PATH --data=$PATH_TO_IMAGENET --eval-attack-iter=$YOUR_ATTACK_ITERATION_FOR_EVAL --batch=$YOUR_EVALUATION_BATCH_SIZE --eval --attack-epsilon=4.0 -d=50 --attack-step-size=1.0 --activation-name=silu
 ```
 <table>
 <thead>
@@ -209,7 +209,7 @@ python main.py  -d=$NETWORK_DEPTH --res2-bottleneck=$RESNEXT_BOTTLENECK --group=
 - __To run EfficientNet with SAT at different scales__
 
 ```bash
-python main.py --model_name=$EFFICIENTNET_NAME --moving_average_decay=$EMA_VALUE --ckpt_path=$YOUR_MODEL_DIR --data_dir=$PATH_TO_IMAGENET_TFRECORDS --eval_batch_size=$YOUR_EVALUATION_BATCH_SIZE --use_tpu=false --mode=eval --use_bfloat16=false --transpose_input=false --strategy=gpus --batch_norm_momentum=0.9 --batch_norm_epsilon=1e-5 --sat_preprocessing=True
+python main.py --model_name=$EFFICIENTNET_NAME --moving_average_decay=$EMA_VALUE --ckpt_path=$YOUR_CKPT_PATH --data_dir=$PATH_TO_IMAGENET_TFRECORDS --eval_batch_size=$YOUR_EVALUATION_BATCH_SIZE --use_tpu=false --mode=eval --use_bfloat16=false --transpose_input=false --strategy=gpus --batch_norm_momentum=0.9 --batch_norm_epsilon=1e-5 --sat_preprocessing=True
 ```
 <table>
 <thead>
