@@ -19,7 +19,9 @@ Code and models for the paper [Smooth Adversarial Training](https://arxiv.org/pd
   <img src="teaser.jpg" width="800px" />
 </div>
 
+## Acknowledgements
 
+The <b>MAJOR</b> part of this code come from [ImageNet-Adversarial-Training](https://github.com/facebookresearch/ImageNet-Adversarial-Training) and [EfficientNet](https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet). We thanks [Yingwei Li](https://yingwei.li/) and [Jieru Mei](https://scholar.google.com/citations?user=nHKExN0AAAAJ&hl) for helping open resource the code and models.
 
 ## Citation
 
