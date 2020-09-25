@@ -40,7 +40,7 @@ We also explore the limits of SAT with larger networks. We obtain the best resul
 
 Note:
 
-1. Scripts to download [ResNet](ResNet/download_resnet.py) or [EfficientNet](EfficientNet/download_efficientnet.py) from Google Drive.
+1. Here are the scripts for downloading [ResNet](ResNet/download_resnet.py) or [EfficientNet](EfficientNet/download_efficientnet.py) from Google Drive.
 2. For robustness evaluation, the maximum perturbation per pixel is 4, and the attacker is non-targeted.
 3. ResNet performance reported here is slightly different from the performance reported in the paper, since the image loader here is slightly different from the [image loader used in the original framework](https://github.com/tensorflow/tpu/blob/master/models/official/resnet/imagenet_input.py).
 
