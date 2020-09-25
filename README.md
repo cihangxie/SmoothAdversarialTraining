@@ -43,7 +43,7 @@ Scripts to download [ResNet](ResNet/download_resnet.py) or [EfficientNet](Effici
 <table>
 <thead>
 <tr>
-<th align="left" rowspan=2>Model (click for details)</th>
+<th align="left" rowspan=2>ResNet-50</th>
 <th align="center">error rate (%)</th>
 <th align="center" colspan=3>error rate(%)</th>
 </tr>
@@ -58,30 +58,51 @@ Scripts to download [ResNet](ResNet/download_resnet.py) or [EfficientNet](Effici
 
 <tbody>
 <tr>
-<td align="left"><details><summary>ReLU </summary> <code>--arch ResNet -d 152</code></details></td>
+<td align="left"><summary>ReLU </summary></td>
 <td align="center">68.7</td>
-<td align="center"></td>
 <td align="center">35.3</td>
 <td align="center">33.7</td>
 <td align="center">33.1</td>
 </tr>
 
 <tr>
-<td align="left"><details><summary>ReLU </summary> <code>--arch ResNet -d 152</code></details></td>
-<td align="center">68.7</td>
-<td align="center"></td>
-<td align="center">35.3</td>
-<td align="center">33.7</td>
-<td align="center">33.1</td>
+<td align="left"><summary>SILU </summary></td>
+<td align="center">69.7</td>
+<td align="center">43.0</td>
+<td align="center">42.2</td>
+<td align="center">41.9</td>
 </tr>
 
 <tr>
-<td align="left"><details><summary>ReLU </summary> <code>--arch ResNet -d 152</code></details></td>
-<td align="center">68.7</td>
-<td align="center"></td>
-<td align="center">35.3</td>
-<td align="center">33.7</td>
-<td align="center">33.1</td>
+<td align="left"><summary>ELU </summary></td>
+<td align="center">69.0</td>
+<td align="center">41.6</td>
+<td align="center">40.9</td>
+<td align="center">40.7</td>
+</tr>
+
+<tr>
+<td align="left"><summary>GELU </summary></td>
+<td align="center">69.9</td>
+<td align="center">42.6</td>
+<td align="center">41.8</td>
+<td align="center">41.5</td>
+</tr>
+
+<tr>
+<td align="left"><summary>SmoothReLU </summary></td>
+<td align="center">69.3</td>
+<td align="center">41.3</td>
+<td align="center">40.4</td>
+<td align="center">40.1</td>
+</tr>
+
+<tr>
+<td align="left"><summary>Softplus </summary></td>
+<td align="center">68.1</td>
+<td align="center">41.1</td>
+<td align="center">40.4</td>
+<td align="center">40.2</td>
 </tr>
 </tbody>
 </table>
