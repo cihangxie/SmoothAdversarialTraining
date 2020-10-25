@@ -758,6 +758,7 @@ def main(unused_argv):
     run_config = tf.estimator.RunConfig(
         model_dir=FLAGS.model_dir,
         train_distribute=strategy,
+        eval_distribute=strategy,
         log_step_count_steps=FLAGS.iterations_per_loop,
         session_config=config_proto,
         save_checkpoints_steps=save_checkpoints_steps,
