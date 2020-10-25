@@ -10,7 +10,7 @@ Code and models for the paper [Smooth Adversarial Training](https://arxiv.org/pd
 - [x] ResNet adversarial robustness evaluation
 - [ ] ResNet adversarial training
 - [x] EfficientNet single-GPU inference
-- [ ] EfficientNet multi-GPU inference
+- [x] EfficientNet multi-GPU inference
 - [ ] EfficientNet adversarial robustness evaluation
 - [ ] EfficientNet adversarial training
 
