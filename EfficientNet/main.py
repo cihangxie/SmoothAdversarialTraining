@@ -203,7 +203,7 @@ flags.DEFINE_string(
     'The column name storing TFExamples.')
 
 flags.DEFINE_string(
-    'data_format', default='channels_last',
+    'data_format', default='channels_first',
     help=('A flag to override the data format used in the model. The value'
           ' is either channels_first or channels_last. To run the network on'
           ' CPU or TPU, channels_last should be used. For GPU, channels_first'
