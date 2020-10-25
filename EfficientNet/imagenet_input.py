@@ -214,7 +214,7 @@ class ImageNetTFExampleInput(six.with_metaclass(abc.ABCMeta, object)):
     """
     return
 
-  def input_fn(self, params):
+  def input_fn(self, params, input_context=None):
     """Input function which provides a single batch for train or eval.
 
     Args:
@@ -235,6 +235,13 @@ class ImageNetTFExampleInput(six.with_metaclass(abc.ABCMeta, object)):
     else:
       current_host = 0
       num_hosts = 1
+      
+    # Provided by DistributionStrategy
+    # https://github.com/tensorflow/estimator/blob/6905263c0ee3d8dd6ccdcee41b8d522ea45aaac6/tensorflow_estimator/python/estimator/estimator.py#L1023
+    # https://github.com/tensorflow/estimator/blob/6905263c0ee3d8dd6ccdcee41b8d522ea45aaac6/tensorflow_estimator/python/estimator/estimator.py#L1124
+    if input_context:
+      current_host = input_context.input_pipeline_id
+      num_hosts = input_context.num_input_pipelines
 
     dataset = self.make_source_dataset(current_host, num_hosts)
     # Use the fused map-and-batch operation.
