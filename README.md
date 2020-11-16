@@ -107,14 +107,6 @@ python main.py --activation-name=$YOUR_ACTIVATION_FUNCTION --load=$YOUR_CKPT_PAT
 <td align="center">40.4</td>
 <td align="center">40.1</td>
 </tr>
-
-<tr>
-<td align="left"><details><summary>Res</summary> <code>--activation-name=silu</code></details></td>
-<td align="center">69.7</td>
-<td align="center">43.0</td>
-<td align="center">42.2</td>
-<td align="center">41.9</td>
-</tr>
 </tbody>
 </table>
 
